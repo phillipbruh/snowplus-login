@@ -1,0 +1,85 @@
+<html>
+<head>
+<h1>Introduce Yourself  :D</h1>
+
+<style>
+body {
+ /*background-image: url("for_project_doodle.jpg");*/
+ background-color: #ffcc5c;
+}
+img{
+opacity: 0.3;
+float: left;
+position: absolute;
+top: 00px;
+left: 0px;
+width: 100%;
+}
+#frm
+{
+ position: absolute;
+    top: 100px;
+    left: 16px;
+	font-size: 25px;
+	font-family: Arial, Helvetica, sans-serif;
+}
+</style>
+
+<script>
+function check()
+{ 
+var a = document.getElementById("cnfm1").value;
+var b = document.getElementById("cnfm2").value;
+var x1 = document.forms["fm"]["na"].value;
+var x2 = document.forms["fm"]["ag"].value;
+var x3 = document.forms["fm"]["ph"].value;
+var x4 = document.forms["fm"]["ID"].value;
+var x5 = document.forms["fm"]["PASS"].value;
+if(x1 == "" || x2=="" || x3=="" || x4=="" || x5=="")
+{
+	alert("Any one field is empty");
+	location.reload();
+	//return false;
+}
+if(a != b)
+{
+ alert("Pasword Do not match. Reenter password again");
+ location.reload();
+}
+else if(a == "" && b=="")
+{
+ alert("Epmpty Pssword");
+ location.reload();
+}
+else
+{
+alert("Password match! Click on Submit button");
+}
+}
+</script>
+
+</head>
+<body>
+	<img src="for_project_doodle.jpg">
+	<form action="php_signup.php" method="post" id="frm" name="fm">
+		Name:<input type="text" name="na">
+			<br>
+		Age:<input type="number" name="ag">
+			<br>
+		Gender: <input type="radio" name="ge" value="male" checked> Male
+				<input type="radio" name="ge" value="female"> Female
+				<input type="radio" name="ge" value="other"> Other  
+			<br>
+		Phone:<input type="number" name="ph">
+			<br> 
+		ID:<input type="text" name="ID">
+			<br>
+		Password:<input type="text" name="PASS" id="cnfm1">
+		Re Enter Password:<input type="text" name="new_pass" id="cnfm2">
+			<br>
+		Click to check pasword<input type="button" value="Check Password!">
+			<br>
+		Click to Submit Value <input type="submit" onclick="check()" value="Submit !">
+	</form>
+</body>
+</html>

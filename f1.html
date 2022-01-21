@@ -1,0 +1,71 @@
+<html>
+<head>
+<h1 style="font-family: Arial, Helvetica, sans-serif; text-align: center;">Click On any one of the Box !</h1>
+<script>
+function sign() {
+    window.open("sign_up.html");
+}
+function log() {
+    window.open("log_in.html");
+}
+function admin()
+{
+   window.open("php_admin.php");
+}
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+    box-sizing: border-box;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+    float: left;
+    width: 33.33%;
+    padding: 10px;
+    height: 700px; /* Should be removed. Only for demonstration */ 
+	text-align: center;
+	 font-family: Arial, Helvetica, sans-serif;
+	 
+}
+.column:hover
+{
+  zoom: 1.5;
+  filter: alpha(opacity=45);
+  box-shadow: 3px 3px 15px #666;
+  color: #555555;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+</style>
+</head>
+<body>
+<div class="row">
+  <div class="column" style="background-color: #ffcc5c;" onclick="sign()">
+    <h2>New User?</h2>
+    <p>Click anywhere to Sign-up</p>
+  </div>
+  <div class="column" style="background-color:#ffeead;" onclick="log()">
+    <h2>Existing User?</h2>
+    <p>Click anywhere to Log-in</p>
+  </div>
+  <div class="column" style="background-color:#96ceb4;">
+    <h2>Admin ?</h2>
+    <p>You're awesome !</p>
+	<form  action="php_admin.php" method="post">
+		Enter Password:<br><input type="text" name="PASS">
+			<br>
+			<br>
+			<input type="submit" value="Insert">
+	</form>
+  </div>
+</div>
+</body>
+</html>
